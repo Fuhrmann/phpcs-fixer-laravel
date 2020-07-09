@@ -1,4 +1,4 @@
-### Instructions
+## Instructions
 
 Add this repository to `composer.json` file:
 
@@ -30,3 +30,15 @@ Add the command to the `scripts` section:
     }
 }
 ```
+
+Then execute the fixer with: `composer fix-style`.
+
+
+### Reference
+
+Check [php-cs-fixer](https://cs.symfony.com/) official website for rules reference.
+
+
+### Credits
+
+Based on this [gist](https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200). 
