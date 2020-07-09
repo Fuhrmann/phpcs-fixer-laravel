@@ -1,7 +1,7 @@
 {
     "name": "fuhrmann/phpcs-fixer-laravel",
     "type": "project",
-    "description": "Rules for PhpCsFixer using in Laravel projects.",
+    "description": "Rules for PhpCsFixer used in Laravel projects.",
     "keywords": [
         "phpcsfixer",
         "laravel"
