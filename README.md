@@ -26,7 +26,7 @@ Add the command to the `scripts` section:
 ```json
 {
     "scripts": {
-        "fix-style": "vendor/bin/php-cs-fixer fix --config=vendor/fuhrmann/php-cs-fixer-laravel/.php_cs.dist --ansi"
+        "fix-style": "vendor/bin/php-cs-fixer fix --config=vendor/fuhrmann/phpcs-fixer-laravel/.php_cs.dist --ansi"
     }
 }
 ```
