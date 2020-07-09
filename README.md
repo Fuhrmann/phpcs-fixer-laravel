@@ -33,7 +33,9 @@ Add the command to the `scripts` section:
 
 Then execute the fixer with: `composer fix-style`.
 
-### Composer hook
+### Composer (docker) hooks
+
+*Assuming you have a container just for composer.* 
 
 If you want to fix the styles on every commit, you can:
 
@@ -42,21 +44,30 @@ If you want to fix the styles on every commit, you can:
        "extra": {
            "hooks": {
                "pre-commit": [
-                   "fix-style"
+                   "docker-compose run --rm composer fix-style"
                ],
-               "pre-push": [
-                   "fix-style --dry-run"
-               ],
-               "post-merge": "composer install",
                "...": "..."
            }
        }
    }
 ```
 
+Declare in the scripts section so the hooks keep updated:
+
+```json
+{
+    "scripts": {
+        "cghooks": "vendor/bin/cghooks",
+        "post-install-cmd": "docker-compose run --rm composer cghooks add --ignore-lock",
+        "post-update-cmd": "docker-compose run --rm composer cghooks update"
+    }
+}
+```
+
 ### Reference
 
-Check [php-cs-fixer](https://cs.symfony.com/) official website for rules reference.
+- Check [php-cs-fixer](https://cs.symfony.com/) official website for rules reference.
+- Check [composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) for the documentation.
 
 
 ### Credits
