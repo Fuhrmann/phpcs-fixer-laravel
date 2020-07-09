@@ -5,17 +5,24 @@ use PhpCsFixer\Finder;
 
 $rules = [
     'array_syntax' => ['syntax' => 'short'],
+    'align_multiline_comment' => [
+        'comment_type' => 'phpdocs_only',
+    ],
     'binary_operator_spaces' => [
         'default' => 'single_space',
         'operators' => ['=>' => null]
     ],
     'blank_line_after_namespace' => true,
     'blank_line_after_opening_tag' => true,
+    'blank_line_before_return' => true,
     'blank_line_before_statement' => [
         'statements' => ['return']
     ],
     'braces' => true,
     'cast_spaces' => true,
+    'combine_consecutive_issets' => true,
+    'combine_consecutive_unsets' => true,
+    'compact_nullable_typehint' => true,
     'class_attributes_separation' => [
         'elements' => ['method']
     ],
@@ -24,6 +31,8 @@ $rules = [
         'spacing' => 'none'
     ],
     'declare_equal_normalize' => true,
+    'explicit_indirect_variable' => true,
+    'explicit_string_variable' => true,
     'elseif' => true,
     'encoding' => true,
     'full_opening_tag' => true,
@@ -42,6 +51,8 @@ $rules = [
     'lowercase_static_reference' => true, // added from Symfony
     'magic_method_casing' => true, // added from Symfony
     'magic_constant_casing' => true,
+    'method_chaining_indentation' => true,
+    'method_separation' => true,
     'method_argument_space' => true,
     'native_function_casing' => true,
     'no_alias_functions' => true,
@@ -91,6 +102,8 @@ $rules = [
     'phpdoc_no_package' => true,
     'phpdoc_no_useless_inheritdoc' => true,
     'phpdoc_scalar' => true,
+    'phpdoc_order' => true,
+    'phpdoc_separation' => true,
     'phpdoc_single_line_var_spacing' => true,
     'phpdoc_summary' => true,
     'phpdoc_to_comment' => true,
@@ -98,6 +111,9 @@ $rules = [
     'phpdoc_types' => true,
     'phpdoc_var_without_name' => true,
     'psr4' => true,
+    'return_type_declaration' => [
+        'space_before' => 'one',
+    ],
     'self_accessor' => true,
     'short_scalar_cast' => true,
     'simplified_null_return' => false, // disabled by Shift

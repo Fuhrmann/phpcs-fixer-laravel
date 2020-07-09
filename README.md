@@ -41,4 +41,4 @@ Check [php-cs-fixer](https://cs.symfony.com/) official website for rules referen
 
 ### Credits
 
-Based on this [gist](https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200). 
+Based on this [gist](https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200) with a few changes. 
