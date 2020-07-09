@@ -33,6 +33,26 @@ Add the command to the `scripts` section:
 
 Then execute the fixer with: `composer fix-style`.
 
+### Composer hook
+
+If you want to fix the styles on every commit, you can:
+
+```json
+{
+       "extra": {
+           "hooks": {
+               "pre-commit": [
+                   "fix-style"
+               ],
+               "pre-push": [
+                   "fix-style --dry-run"
+               ],
+               "post-merge": "composer install",
+               "...": "..."
+           }
+       }
+   }
+```
 
 ### Reference
 
