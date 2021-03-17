@@ -8,8 +8,8 @@
     ],
     "license": "MIT",
     "require": {
-        "friendsofphp/php-cs-fixer": "2.16.4",
-        "brainmaestro/composer-git-hooks": "2.8.3"
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "brainmaestro/composer-git-hooks": "^2.8"
     },
     "config": {
         "optimize-autoloader": true,
